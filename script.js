@@ -5,7 +5,7 @@ const typingElement = document.querySelector(".typing-effect");
 
 function typeWriter() {
     if (i < typingText.length) {
-        typingElement.innerHTML += typingText.charAt(i);
+        typingElement.innerHTML = typingText.substring(0, i + 1);
         i++;
         setTimeout(typeWriter, 100);
     }
