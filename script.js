@@ -12,18 +12,19 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
-// Parallax Effect for Project Cards
+// Fade-in and Scale-up Animation for Project Cards
 const projectCards = document.querySelectorAll('.project-card');
-window.addEventListener('scroll', () => {
-    projectCards.forEach(card => {
-        const speed = card.getAttribute('data-parallax-speed');
-        const cardPos = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (cardPos < windowHeight) {
-            const translateY = (windowHeight - cardPos) * speed;
-            card.style.transform = `translateY(-${translateY}px)`;
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
         }
     });
+}, { threshold: 0.1 });
+
+projectCards.forEach(card => {
+    observer.observe(card);
 });
 
 // Scroll-to-Top Button
