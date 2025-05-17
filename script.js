@@ -1,38 +1,44 @@
-let currentSlides = [0, 0, 0];
-const sliders = document.querySelectorAll('.slider');
+// Typing Effect for Header
+const typingText = "Ahmad Abror Rozaqi Fatoni";
+let i = 0;
+const typingElement = document.querySelector(".typing-effect");
 
-function showSlide(sliderIndex, slideIndex) {
-    const slider = sliders[sliderIndex];
-    const slides = slider.querySelector('.slides');
-    const slideCount = slides.querySelectorAll('img').length;
-    const dots = slider.querySelectorAll('.dot');
-
-    if (slideIndex >= slideCount) currentSlides[sliderIndex] = 0;
-    else if (slideIndex < 0) currentSlides[sliderIndex] = slideCount - 1;
-    else currentSlides[sliderIndex] = slideIndex;
-
-    slides.style.transform = `translateX(-${currentSlides[sliderIndex] * 100}%)`;
-
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlides[sliderIndex]);
-    });
-}
-
-function moveSlide(direction, sliderIndex) {
-    showSlide(sliderIndex, currentSlides[sliderIndex] + direction);
-}
-
-sliders.forEach((slider, index) => {
-    const slideCount = slider.querySelectorAll('img').length;
-    const dotsContainer = slider.querySelector('.dots');
-
-    for (let i = 0; i < slideCount; i++) {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        dot.onclick = () => showSlide(index, i);
-        dotsContainer.appendChild(dot);
+function typeWriter() {
+    if (i < typingText.length) {
+        typingElement.innerHTML += typingText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
     }
+}
+window.onload = typeWriter;
 
-    showSlide(index, 0);
+// Parallax Effect for Project Cards
+const projectCards = document.querySelectorAll('.project-card');
+window.addEventListener('scroll', () => {
+    projectCards.forEach(card => {
+        const speed = card.getAttribute('data-parallax-speed');
+        const cardPos = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (cardPos < windowHeight) {
+            const translateY = (windowHeight - cardPos) * speed;
+            card.style.transform = `translateY(-${translateY}px)`;
+        }
+    });
+});
+
+// Scroll-to-Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
