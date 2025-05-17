@@ -367,18 +367,45 @@ h2.no-underline::after {
 }
 
 #contact {
-    background-color: #112240;
+    background-color: #1a2a44;
     text-align: center;
+    padding: 40px 20px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1em;
+    color: #ccd6f6;
+    margin-bottom: 10px;
 }
 
 #contact a {
     color: #64ffda;
-    font-size: 1.2em;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
 }
 
 #contact a:hover {
+    color: #ffd700;
+}
+
+.contact-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.contact-social-links a {
+    color: #64ffda;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.contact-social-links a:hover {
     color: #ffd700;
 }
 
@@ -386,50 +413,11 @@ footer {
     background: #0a192f;
     padding: 20px 0;
     text-align: center;
-    color: #ccd6f6;
-}
-
-footer h3 {
-    font-size: 1.8em;
-    color: #64ffda;
-    margin-bottom: 10px;
+    color: #8892b0;
 }
 
 footer p {
-    font-size: 1em;
-    margin-bottom: 15px;
-}
-
-footer a {
-    color: #64ffda;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-footer a:hover {
-    color: #ffd700;
-}
-
-.footer-social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.footer-social-links a {
-    color: #64ffda;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-}
-
-.footer-social-links a:hover {
-    color: #ffd700;
-}
-
-footer p:last-child {
     font-size: 0.9em;
-    margin-top: 20px;
 }
 
 #scroll-to-top {
@@ -495,11 +483,7 @@ footer p:last-child {
         gap: 10px;
     }
 
-    footer h3 {
-        font-size: 1.5em;
-    }
-
-    footer p {
-        font-size: 0.9em;
+    #contact {
+        padding: 30px 15px;
     }
 }
