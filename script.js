@@ -46,6 +46,10 @@ const projectDetails = {
         title: 'JTI-SIMPEN (Sistem Informasi Kompensasi)',
         description: 'Membangun sistem berbasis web dan mobile untuk pengelolaan kompensasi mahasiswa, meliputi pengajuan, pemilihan pekerjaan, validasi, dan pelacakan status secara real-time. Sistem ini mempermudah pemantauan kompensasi dengan pengalaman pengguna yang efisien, menggunakan Laravel, MySQL, API development, dan desain UI/UX.',
         image: 'images/jti-simpen-screenshot.png',
+        image: 'images/jti-simpen-screenshot2.png',
+        image: 'images/jti-simpen-screenshot3.png',
+        image: 'images/jti-simpen-screenshot4.png',
+        image: 'images/jti-simpen-screenshot5.png',
         github: 'https://github.com/rozaqi02/JTI_SIMPEN'
     }
 };
