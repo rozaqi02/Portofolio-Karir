@@ -78,8 +78,8 @@ header {
 }
 
 .profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
     object-fit: cover;
@@ -301,6 +301,24 @@ h2.no-underline::after {
     color: #ccd6f6;
 }
 
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #0a192f;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #64ffda;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #ffd700;
+}
+
 .close-modal {
     position: absolute;
     top: 10px;
@@ -321,20 +339,25 @@ h2.no-underline::after {
     margin-bottom: 20px;
 }
 
-.modal-content img {
+.modal-image {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-.modal-content a {
+.modal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-links a {
     color: #64ffda;
     text-decoration: none;
     font-size: 1.1em;
 }
 
-.modal-content a:hover {
+.modal-links a:hover {
     color: #ffd700;
 }
 
