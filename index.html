@@ -6,9 +6,21 @@
     <title>Portofolio Karir - Ahmad Abror Rozaqi Fatoni</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
         <div class="header-content">
             <h1 class="typing-effect"></h1>
             <p>Web Developer | Data Analyst</p>
@@ -27,18 +39,58 @@
         </div>
     </section>
 
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-laravel"></i>
+                    <p>Laravel</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <p>PHP</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Looker Studio</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Power BI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
             <h2>Proyek Saya</h2>
             <div class="project-grid">
-                <div class="project-card" data-parallax-speed="0.2">
+                <div class="project-card" data-project="survey-polinema">
                     <h3>Sistem Survei Kepuasan Pelanggan Polinema</h3>
                     <p>Mengembangkan aplikasi web untuk mengelola survei kepuasan pemangku kepentingan Politeknik Negeri Malang guna meningkatkan kualitas layanan.</p>
                     <p>Membuat sistem pengumpulan jawaban responden dan laporan hasil survei untuk analisis lebih lanjut.</p>
                     <p>Menggunakan PHP, HTML, CSS, JavaScript, MySQL, dan template UI AdminLTE untuk pengembangan.</p>
                     <p><a href="https://github.com/rozaqi02/SISTEM-SURVEY-KEPUASAN-PELANGGAN-POLINEMA" target="_blank">Lihat di GitHub</a></p>
                 </div>
-                <div class="project-card" data-parallax-speed="0.3">
+                <div class="project-card" data-project="jti-simpen">
                     <h3>JTI-SIMPEN (Sistem Informasi Kompensasi)</h3>
                     <p>Membangun sistem berbasis web dan mobile untuk pengelolaan kompensasi mahasiswa, meliputi pengajuan, pemilihan pekerjaan, validasi, dan pelacakan status secara real-time.</p>
                     <p>Mengintegrasikan komponen sistem untuk mempermudah pemantauan kompensasi dengan pengalaman pengguna yang efisien.</p>
@@ -49,9 +101,19 @@
         </div>
     </section>
 
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <img id="modal-image" src="" alt="Project Screenshot">
+            <a id="modal-github" href="#" target="_blank">Lihat di GitHub</a>
+        </div>
+    </div>
+
     <section id="contact">
         <div class="container">
-            <h2>Kontak</h2>
+            <h2 class="no-underline">Kontak</h2>
             <p>Hubungi saya untuk kolaborasi atau peluang kerja:</p>
             <a href="mailto:abrorrozaqi@gmail.com">abrorrozaqi@gmail.com</a>
         </div>
