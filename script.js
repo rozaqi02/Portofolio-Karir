@@ -12,7 +12,7 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
-// Fade-in and Scale-up Animation for Project Cards
+// Fade-in and Rotate Animation for Project Cards
 const projectCards = document.querySelectorAll('.project-card');
 const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
