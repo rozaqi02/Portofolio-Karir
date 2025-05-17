@@ -39,13 +39,13 @@ const projectDetails = {
     'survey-polinema': {
         title: 'Sistem Survei Kepuasan Pelanggan Polinema',
         description: 'Mengembangkan aplikasi web untuk mengelola survei kepuasan pemangku kepentingan Politeknik Negeri Malang guna meningkatkan kualitas layanan. Sistem ini mencakup pengumpulan jawaban responden dan pembuatan laporan hasil survei untuk analisis lebih lanjut. Proyek ini menggunakan PHP, HTML, CSS, JavaScript, MySQL, dan template UI AdminLTE.',
-        image: 'images/survey-polinema-screenshot.png',
+        image: 'https://via.placeholder.com/500x300?text=Screenshot+Survei+Polinema',
         github: 'https://github.com/rozaqi02/SISTEM-SURVEY-KEPUASAN-PELANGGAN-POLINEMA'
     },
     'jti-simpen': {
         title: 'JTI-SIMPEN (Sistem Informasi Kompensasi)',
         description: 'Membangun sistem berbasis web dan mobile untuk pengelolaan kompensasi mahasiswa, meliputi pengajuan, pemilihan pekerjaan, validasi, dan pelacakan status secara real-time. Sistem ini mempermudah pemantauan kompensasi dengan pengalaman pengguna yang efisien, menggunakan Laravel, MySQL, API development, dan desain UI/UX.',
-        image: 'images/jti-simpen-screenshot.png',
+        image: 'https://via.placeholder.com/500x300?text=Screenshot+JTI-SIMPEN',
         github: 'https://github.com/rozaqi02/JTI_SIMPEN'
     }
 };

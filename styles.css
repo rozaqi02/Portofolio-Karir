@@ -38,7 +38,23 @@ body {
     color: #64ffda;
     text-decoration: none;
     font-size: 1.1em;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link:hover {
@@ -59,6 +75,32 @@ header {
 .header-content {
     position: relative;
     z-index: 1;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(100, 255, 218, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(100, 255, 218, 0);
+    }
 }
 
 header h1 {
@@ -157,11 +199,12 @@ h2.no-underline::after {
     padding: 20px;
     background: #112240;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: scale(1.1);
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
 }
 
 .skill-item i {
@@ -191,18 +234,24 @@ h2.no-underline::after {
     border-radius: 10px;
     border-left: 4px solid #64ffda;
     opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+}
+
+.project-card:nth-child(2) {
+    transform: translateX(100px);
 }
 
 .project-card.visible {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
 }
 
 .project-card:hover {
-    transform: scale(1.02);
+    border-left-color: #ffd700;
+    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+    transform: translateX(0) scale(1.03);
 }
 
 .project-card h3 {
@@ -246,6 +295,8 @@ h2.no-underline::after {
     border-radius: 10px;
     max-width: 600px;
     width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
     position: relative;
     color: #ccd6f6;
 }
@@ -355,5 +406,18 @@ footer {
 
     .nav-link {
         font-size: 0.9em;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-card {
+        transform: translateX(-50px);
+    }
+
+    .project-card:nth-child(2) {
+        transform: translateX(50px);
     }
 }
