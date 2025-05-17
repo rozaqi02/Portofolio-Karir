@@ -168,6 +168,11 @@ h2.no-underline::after {
     margin-bottom: 20px;
 }
 
+.about-buttons {
+    display: flex;
+    gap: 20px;
+}
+
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
@@ -442,5 +447,10 @@ footer {
 
     .project-card:nth-child(2) {
         transform: translateX(50px);
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 }
